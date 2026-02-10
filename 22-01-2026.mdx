@@ -1,0 +1,29 @@
+---
+layout: ../../layouts/Main/Main.astro
+title: Hospedando coisinhas num servidor próprio
+pubDate: 2026-01-22T18:45:00.000Z
+description: De repente passei a ~odiar~ amar forçadamente a gcp
+tags:
+  - selfhosting
+  - homelab
+  - linux
+---
+# Hospedando coisinhas num servidor próprio
+## 22/01/2026
+
+Bem... Já faz um tempo né?
+
+Acabou que eu parei de fazer posts por falta de ideia do que postar e as ideias que eu tinha eram horriveis. Porém esse tempo passou e volto aqui pra falar de uma coisa legal **_Homelabbing!_**.
+
+Homelabbing é simplesmente o ato de hospedar algo de maneira local, começa tranquilo mas depois vicia, não de um jeito ruim, de um jeito ótimo porque a cada mais você hospeda, mais você aprende, seja pm2, nginx/apache, php, etc...
+
+Agora o motivo de porque começar a fazer homelabbing varia. Eu particulamente comecei um homelab pra hospedar servidores de jogos e paineis com o pterodactyl (ô saco de hospedar isso), homeassistant, jellyfin pra gerenciamento de mídia e o vaultwarden pra eu finalmente criar vergonha na cara e parar de usar um gerenciador de senhas inseguro (google passwords) e que cobra absurdos por features simples (protonpass).
+
+Hospedar é tranquilo, dependendo do app, só inicializar um conteiner docker do app e ir configurando ou num arquivo de config ou no próprio comando. Isso é bom e fácil até você precisar de um jeito melhor de configurar e orquestrar os conteiners, é ai que vem o compose! Que soluciona todos esses problemas. O jeito que você vai organizar no seu servidor vai de gosto pessoal. Particulamente, prefiro criar pastas para cada conteiner, com exceção do jellyfin que tem tantos apps para funcionar de maneira "semi-automática", que é melhor só criar uma pasta pra tudo (Quem sabe eu não faço um guia de como hospedar um server de minecraft ou jellyfin no futuro?). E caso queira tacar algo local na rede global, só usar o cloudflared (o f*** é que precisa de um domínio...)
+
+No mais é isso, só um oi de volta e que eu não morri, que venha um guia no futuro de como hospedar alguma coisa AAAHHHHHHHH! Também aqui vai a stack/spec do meu servidor para os curiosos :3
+
+- OS: Fedora Server
+- Apps: vaultwarden, Jellyfin, Home Assistant
+- CPU: Intel i5 7200u
+- RAM: 12GB (8+4)
